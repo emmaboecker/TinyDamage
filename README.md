@@ -1,9 +1,11 @@
-# Fabric Example Mod
+# Tiny Damage
+A Mod that changes your player size based on how much health you have
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+## Requirements
+You need to install 2 other mods that are required for this mod to work
+- [Fabric API](https://modrinth.com/mod/fabric-api)
+- [Pehkui](https://www.curseforge.com/minecraft/mc-mods/pehkui)
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+ This mod is available under the [AGPL-3.0 License](https://choosealicense.com/licenses/agpl-3.0/)
