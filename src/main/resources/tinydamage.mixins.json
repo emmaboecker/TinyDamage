@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
-  "compatibilityLevel": "JAVA_16",
+  "package": "net.stckoverflw.tinydamage.mixin",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "DamageMixin"
   ],
   "client": [
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

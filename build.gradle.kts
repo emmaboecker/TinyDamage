@@ -1,7 +1,11 @@
 plugins {
 	id("fabric-loom") version "0.10-SNAPSHOT"
+	kotlin("jvm") version "1.6.10"
 	`maven-publish`
 }
+
+group = "net.stckoverflw"
+version = "1.0.0"
 
 val sourceCompatibility = JavaVersion.VERSION_17
 val targetCompatibility = JavaVersion.VERSION_17
@@ -11,30 +15,22 @@ val mod_version: String by project
 val maven_group: String by project
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+	maven("https://jitpack.io")
 }
 
 val minecraft_version: String by project
 val yarn_mappings: String by project
 val loader_version: String by project
 
-val fabric_version: String by project
+val pehkui_version: String by project
 
 dependencies {
-	// To change the versions see the gradle.properties file
-	minecraft("com.mojang:minecraft:${minecraft_version}")
-	mappings("net.fabricmc:yarn:${yarn_mappings}:v2")
-	modImplementation("net.fabricmc:fabric-loader:${loader_version}")
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}")
+	minecraft("com.mojang:minecraft:$minecraft_version")
+	mappings("net.fabricmc:yarn:$yarn_mappings:v2")
+	modImplementation("net.fabricmc:fabric-loader:$loader_version")
 
-	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
-	// You may need to force-disable transitiveness on them.
+	modApi("com.github.Virtuoel:Pehkui:${pehkui_version}")
 }
 
 tasks {
